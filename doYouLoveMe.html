@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doYouLoveMe</title>
+    <style>
+        table{
+            margin: 200px auto;
+        }
+        td{
+
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="2">Do You Love Me?</th>
+    </tr>
+    <tr>
+        <td align="center">
+            <input type="button" id="yes" value="Yes" onclick="pressYes()"/>
+        </td>
+        <td align="center">
+            <input type="button" id="No" value="No" onmouseover="pressNo()" style="position:relative;"/>
+        </td>
+    </tr>
+
+</table>
+    <script>
+        function pressYes() {
+            alert('i love you ' + Math.round(Math.random() * 3000) )
+
+        }
+        function pressNo() {
+            let x = Math.round(Math.random()*window.innerWidth);
+            let y = Math.round(Math.random()*window.innerHeight);
+            document.getElementById('No').style.left = x + 'px';
+            document.getElementById('No').style.top = y + 'px';
+
+        }
+    </script>
+</body>
+</html>
